@@ -1,0 +1,8 @@
+spring:
+    profiles:
+        active: standalone
+
+#https://docs.spring.io/spring-cloud-netflix/docs/current/reference/html/#defaultopenfortrafficcount-and-its-effect-on-eurekaserver-warmup-time
+eureka:
+    server:
+        defaultOpenForTrafficCount: 0
