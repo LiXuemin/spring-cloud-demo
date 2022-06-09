@@ -15,6 +15,7 @@
     <artifactId>coupon-template-serv</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+    <description>重点关注防御性编程、代码自动生成、金额计算、如何简化数据校验、级联关系的误区</description>
 
     <modules>
         <module>coupon-template-api</module>
