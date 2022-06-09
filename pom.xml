@@ -20,6 +20,7 @@
         <module>eureka-server</module>
         <module>eureka-client</module>
         <module>coupon-template-serv</module>
+        <module>coupon-calculation-serv</module>
     </modules>
 
     <properties>
