@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+
 @Slf4j
 @RestController
 @RequestMapping("/template")
@@ -41,7 +42,7 @@ public class CouponTemplateController {
 
     // 读取优惠券
     @GetMapping("/getTemplate")
-    public CouponTemplateInfo getTemplate(@RequestParam("id") Long id){
+    public CouponTemplateInfo getTemplate(@RequestParam("id") Long id) {
         log.info("Load template, id={}", id);
         return couponTemplateService.loadTemplateInfo(id);
     }
@@ -62,7 +63,7 @@ public class CouponTemplateController {
 
     // 优惠券无效化
     @DeleteMapping("/deleteTemplate")
-    public void deleteTemplate(@RequestParam("id") Long id){
+    public void deleteTemplate(@RequestParam("id") Long id) {
         log.info("Load template, id={}", id);
         couponTemplateService.deleteTemplate(id);
     }

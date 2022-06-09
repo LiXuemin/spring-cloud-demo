@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 
 /**
  * 定义了使用优惠券的规则
- * */
+ */
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -19,5 +19,4 @@ public class Discount {
     private Long quota;
     //订单优惠阈值：订单最低达到多少钱才能用优惠券，单位是分
     private Long threshold;
-
 }

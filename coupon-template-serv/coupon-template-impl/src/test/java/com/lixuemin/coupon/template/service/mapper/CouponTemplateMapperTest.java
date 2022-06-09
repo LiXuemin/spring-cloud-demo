@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Test;
 
 class CouponTemplateMapperTest {
     @Test
-    void testEntityToDto(){
+    void testEntityToDto() {
         CouponTemplate template = CouponTemplate.builder()
             .name("nnname")
             .description("desc")
@@ -20,7 +20,5 @@ class CouponTemplateMapperTest {
             .build();
         final CouponTemplateInfo dto = CouponTemplateMapper.INSTANCE.templateEntityToDto(template);
         System.out.println(JSON.toJSON(dto));
-
     }
-
 }

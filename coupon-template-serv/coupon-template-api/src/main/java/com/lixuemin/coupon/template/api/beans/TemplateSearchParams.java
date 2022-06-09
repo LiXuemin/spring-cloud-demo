@@ -25,5 +25,4 @@ public class TemplateSearchParams {
     private int page;
 
     private int pageSize;
-
 }

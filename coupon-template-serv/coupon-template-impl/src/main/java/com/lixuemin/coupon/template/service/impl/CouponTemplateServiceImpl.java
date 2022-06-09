@@ -14,7 +14,6 @@ import java.util.Optional;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Example;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -26,9 +25,8 @@ import org.springframework.stereotype.Service;
 @Slf4j
 public class CouponTemplateServiceImpl implements CouponTemplateService {
 
-    private final CouponTemplateDao couponTemplateDao;
-
     private static final CouponTemplateMapper MAPPER = CouponTemplateMapper.INSTANCE;
+    private final CouponTemplateDao couponTemplateDao;
 
     public CouponTemplateServiceImpl(CouponTemplateDao couponTemplateDao) {
         this.couponTemplateDao = couponTemplateDao;
@@ -90,7 +88,7 @@ public class CouponTemplateServiceImpl implements CouponTemplateService {
 
     //将模板无效
     public void deleteTemplate(Long id) {
-        log.info("disable template id {}",id);
+        log.info("disable template id {}", id);
         final int rows = couponTemplateDao.makeCouponUnavailable(id);
         if (rows == 0) {
             throw new IllegalArgumentException("Template not found : " + id);
@@ -100,7 +98,8 @@ public class CouponTemplateServiceImpl implements CouponTemplateService {
     //批量读取模板
     public Map<Long, CouponTemplateInfo> getTemplateInfoMap(Collection<Long> ids) {
         final List<CouponTemplate> templates = couponTemplateDao.findAllById(ids);
-        return templates.stream().map(r -> MAPPER.templateEntityToDto(r))
+        return templates.stream()
+            .map(r -> MAPPER.templateEntityToDto(r))
             .collect(Collectors.toMap(CouponTemplateInfo::getId, Function.identity()));
     }
 }

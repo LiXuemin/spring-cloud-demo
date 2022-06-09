@@ -6,6 +6,7 @@ import com.lixuemin.coupon.template.api.beans.TemplateSearchParams;
 import java.util.Collection;
 import java.util.Map;
 
+
 public interface CouponTemplateService {
 
     // 创建优惠券模板

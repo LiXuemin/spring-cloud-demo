@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 
 /**
  * 优惠券模板
- * */
+ */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -31,7 +31,4 @@ public class CouponTemplateInfo {
     private TemplateRule rule; //优惠券使用规则
 
     private Boolean available; //状态位，当前模板是否可用
-
-
-
 }

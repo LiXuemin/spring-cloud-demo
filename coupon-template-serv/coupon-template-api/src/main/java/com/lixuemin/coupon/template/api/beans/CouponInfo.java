@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 
 /**
  * 优惠券信息
- * */
+ */
 @Data
 @AllArgsConstructor
 @NoArgsConstructor

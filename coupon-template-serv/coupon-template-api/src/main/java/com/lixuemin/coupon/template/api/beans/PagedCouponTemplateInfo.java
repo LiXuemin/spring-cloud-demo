@@ -18,5 +18,4 @@ public class PagedCouponTemplateInfo {
     public int page;
 
     public long total;
-
 }

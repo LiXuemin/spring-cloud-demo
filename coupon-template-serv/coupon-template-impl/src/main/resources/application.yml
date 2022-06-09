@@ -7,7 +7,7 @@ spring:
   datasource: # mysql数据源
     username: root
     password: root
-    url: jdbc:mysql://127.0.0.1:3306/lixuemin_coupon_db?autoReconnect=true
+    url: jdbc:mysql://127.0.0.1:3306/lixuemin_coupon_db?autoReconnect=true&serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=UTF-8
     type: com.zaxxer.hikari.HikariDataSource
     driver-class-name: com.mysql.cj.jdbc.Driver
     # 数据库连接池参数配置，比如池子大小、超时时间、是否自动提交等等

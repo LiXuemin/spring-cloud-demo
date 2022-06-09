@@ -4,10 +4,11 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+
 /**
  * 1. 领券规则
  * 2. 券模板的计算规则
- * */
+ */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -18,5 +19,4 @@ public class TemplateRule {
     private Integer limitation;
     //过期时间
     private Long deadline;
-
 }

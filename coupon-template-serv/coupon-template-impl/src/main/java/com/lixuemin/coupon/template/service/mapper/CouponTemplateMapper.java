@@ -14,6 +14,7 @@ public interface CouponTemplateMapper {
     CouponTemplateMapper INSTANCE = Mappers.getMapper(CouponTemplateMapper.class);
 
     CouponTemplate templateDtoToEntity(CouponTemplateInfo info);
+
     List<CouponTemplate> templateDtosToEntities(List<CouponTemplateInfo> info);
 
     CouponTemplateInfo templateEntityToDto(CouponTemplate template);
