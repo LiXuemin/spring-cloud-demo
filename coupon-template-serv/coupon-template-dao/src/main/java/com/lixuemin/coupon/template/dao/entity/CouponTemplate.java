@@ -56,7 +56,7 @@ public class CouponTemplate implements Serializable {
     // 优惠券类型
     @Column(name = "type", nullable = false)
     @Convert(converter = CouponTypeConverter.class)
-    private CouponType type;
+    private CouponType category;
 
     // 创建时间，通过@CreateDate注解自动填值（需要配合@JpaAuditing注解在启动类上生效）
     @CreatedDate

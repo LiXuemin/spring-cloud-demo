@@ -4,7 +4,9 @@ import com.lixuemin.coupon.template.api.beans.CouponTemplateInfo;
 import com.lixuemin.coupon.template.api.beans.TemplateSearchParams;
 import com.lixuemin.coupon.template.dao.entity.CouponTemplate;
 import java.util.List;
+import org.mapstruct.MapMapping;
 import org.mapstruct.Mapper;
+import org.mapstruct.Mapping;
 import org.mapstruct.factory.Mappers;
 
 
@@ -15,11 +17,8 @@ public interface CouponTemplateMapper {
 
     CouponTemplate templateDtoToEntity(CouponTemplateInfo info);
 
-    List<CouponTemplate> templateDtosToEntities(List<CouponTemplateInfo> info);
 
     CouponTemplateInfo templateEntityToDto(CouponTemplate template);
-
-    List<CouponTemplateInfo> templateEntitiesToDtos(List<CouponTemplate> template);
 
     CouponTemplate cloneTemplateEntity(CouponTemplate template);
 

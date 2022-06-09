@@ -3,6 +3,7 @@ package com.lixuemin.coupon.template.service.impl;
 import com.lixuemin.coupon.template.api.beans.CouponTemplateInfo;
 import com.lixuemin.coupon.template.api.beans.PagedCouponTemplateInfo;
 import com.lixuemin.coupon.template.api.beans.TemplateSearchParams;
+import com.lixuemin.coupon.template.api.common.CouponType;
 import com.lixuemin.coupon.template.dao.CouponTemplateDao;
 import com.lixuemin.coupon.template.dao.entity.CouponTemplate;
 import com.lixuemin.coupon.template.service.CouponTemplateService;
@@ -42,7 +43,14 @@ public class CouponTemplateServiceImpl implements CouponTemplateService {
             }
         }
 
-        CouponTemplate template = MAPPER.templateDtoToEntity(request);
+        CouponTemplate template = CouponTemplate.builder()
+            .name(request.getName())
+            .description(request.getDescription())
+            .category(CouponType.convert(request.getType()))
+            .available(true)
+            .shopId(request.getShopId())
+            .rule(request.getRule())
+            .build();
         couponTemplateDao.save(template);
         return MAPPER.templateEntityToDto(template);
     }
