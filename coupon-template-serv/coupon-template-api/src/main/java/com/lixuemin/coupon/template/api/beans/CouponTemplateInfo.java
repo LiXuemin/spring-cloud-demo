@@ -20,7 +20,7 @@ public class CouponTemplateInfo {
     private String name; //优惠券名称
 
     @NotNull
-    private String desc;//优惠券描述
+    private String description;//优惠券描述
 
     @NotNull
     private String type;//优惠券类型(引用CouponType里的code)
